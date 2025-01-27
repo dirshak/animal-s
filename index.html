@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIuKjYyKjY3KjYyKjYyKjY3KjYyKjYyKjYyKjYyKjYyKjYyKjYyKjYyKjYyKjYyKjYz/2wBDAQsLCw8MDx0QEB04NDx4QDw4ODx4WFxIZJCAmJSMgIyIuKjYyKjY3KjYyKjYyKjY3KjYyKjYyKjYyKjYyKjYyKjYyKjYyKjYyKjYyKjYyKjYz/wAARCAFhAAMBAQEBAQAAAAAAAAABAgMEBREABhIhMUEGEhMhAyJBUQJBgcHCAkL/8QAGgEAAwEBAQEBAQEBAQAAAAAAAAECAxEEBTEhMUEGEhMhAyJBUQJBgcHCAkL/8QAGAEBAQEBAQEBAQEBAQAAAAAAAAECAxEEBTEhMUEGEhMhAyJBUQJBgcHCAkL/9oADAMBAAIRAxEAP8A2z5pW7G1R7W1Z7W1Z7W1Z7W1Z7W1Z7W1Z7W1Z7W1Z7W1Z7W1Z7W1Z7W1Z7W1Z7W1Z7W1Z7W1Z7W1Z7W1Z7W1Z//2Q=='); /* Amazon rainforest background */
+            background-size: cover; /* Cover the whole page */
+            color: #fff; /* White text color */
+            text-align: center;
+        }
+        .main-overlay {
+            position: relative;
+            height: 100vh; /* Full height for the main page */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Translucent black overlay */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 48px; /* Large title */
+            color: #2e8b57; /* Forest green */
+        }
+        h2 {
+            font-size: 24px; /* Subtitle */
+            color: #ffeb3b; /* Yellow */
+        }
+        .animal-link {
+            display: block;
+            margin: 15px 0;
+            font-size: 20px; /* Animal links */
+            color: #1e90ff; /* Dodger blue */
+            text-decoration: none;
+            transition: color 0.3s; /* Smooth color transition */
+        }
+        .animal-link:hover {
+            color: #ff4500; /* Change color on hover */
+        }
+        .animal-details {
+            position: relative;
+            display: none; /* Initially hidden */
+        }
+        .animal-background {
+            background-size: cover;
+            height: 400px; /* Fixed height for animal pages */
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Translucent black overlay for animal pages */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .animal-image {
+            width: 100%; /* Responsive image */
+            max-width: 600px; /* Max width for larger screens */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .back-button {
+            margin-top: 20px;
+            font-size: 16px; /* Back button */
+            color: white;
+            background-color: #4682b4; /* Steel blue */
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-overlay">
+    <div class="overlay">
+        <h1>Animals</h1>
+        <h2>Dive into the animals of the Amazon rainforest</h2>
+    </div>
+</div>
+
+<div id="animal-list">
+    <a href="#jaguar" class="animal-link">Jaguar</a>
+    <a href="#giant-otter" class="animal-link">Giant Otter</a>
+    <a href="#golden-lion-tamarin" class="animal-link">Golden Lion Tamarin</a>
+    <a href="#amazonian-manatee" class="animal-link">Amazonian Manatee</a>
+    <a href="#red-faced-uakari" class="animal-link">Red-Faced Uakari</a>
+</div>
+
+<div id="jaguar" class="animal-details">
+    <div class="animal-background" style="background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIuKjYy...');">
+        <div class="overlay">
+           <h3>Jaguar (Panthera onca)</h3>
+           <p><strong>Population:</strong> Fewer than 15,000 in the wild.</p>
+           <p><strong>Lifespan:</strong> Up to 12-15 years in the wild.</p>
+           <p><strong>Diet:</strong> Carnivore, primarily preying on deer and fish.</p>
+           <p><strong>Dangers to Survival:</strong> Habitat loss, poaching.</p>
+           <p>The jaguar is an apex predator crucial for maintaining ecological balance in the Amazon rainforest. Its role as a top predator helps control populations of other species.</p>
+           <button class="back-button" onclick="goBack()">Back</button>
+       </div>
+   </div>
+</div>
+
+<div id="giant-otter" class="animal-details">
+   <div class="animal-background" style="background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD...');">
+       <div class="overlay">
+           <h3>Giant Otter (Pteronura brasiliensis)</h3>
+           <p><strong>Population:</strong> Approximately 5,000 individuals.</p>
+           <p><strong>Lifespan:</strong> Around 10 years in the wild.</p>
+           <p><strong>Diet:</strong> Fish and crustaceans.</p>
+           <p><strong>Dangers to Survival:</strong> Habitat destruction and illegal hunting.</p>
+           <p>The giant otter is known for its social behavior and plays an important role in its ecosystem by controlling fish populations.</p>
+           <button class="back-button" onclick="goBack()">Back</button>
+       </div>
+   </div>
+</div>
+
+<div id="golden-lion-tamarin" class="animal-details">
+   <div class="animal-background" style="background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD...');">
+       <div class="overlay">
+           <h3>Golden Lion Tamarin (Leontopithecus rosalia)</h3>
+           <p><strong>Population:</strong> About 3,700 individuals remain.</p>
+           <p><strong>Lifespan:</strong> Up to 15 years in the wild.</p>
+           <p><strong>Diet:</strong> Fruits, insects, and small vertebrates.</p>
+           <p><strong>Dangers to Survival:</strong> Habitat fragmentation and illegal pet trade.</p>
+           <p>This small primate is crucial for forest regeneration as it disperses seeds while feeding on fruits.</p>
+           <button class="back-button" onclick="goBack()">Back</button>
+       </div>
+   </div>
+</div>
+
+<div id="amazonian-manatee" class="animal-details">
+   <div class="animal-background" style="background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD...');">
+       <div class="overlay">
+           <h3>Amazonian Manatee (Trichechus inunguis)</h3>
+           <p><strong>Population:</strong> Vulnerable status; exact numbers are unknown.</p>
+           <p><strong>Lifespan:</strong> Up to 60 years in the wild.</p>
+           <p><strong>Diet:</strong> Aquatic plants.</p>
+           <p><strong>Dangers to Survival:</strong> Water pollution and habitat destruction.</p>
+           <p>The Amazonian manatee is a gentle herbivore that plays a vital role in maintaining healthy aquatic ecosystems by controlling aquatic plant growth.</p>
+           <button class="back-button" onclick="goBack()">Back</button>
+       </div>
+   </div>
+</div>
+
+<div id="red-faced-uakari" class="animal-details">
+   <div class="animal-background" style="background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAAAD...');">
+       <div class="overlay">
+           <h3>Red-Faced Uakari (Cacajao calvus)</h3>
+           <p><strong>Population:</strong> Vulnerable status; population declining due to habitat loss.</p>
+           <p><strong>Lifespan:</strong> Up to 25 years in the wild.</p>
+           <p><strong>Diet:</strong> Fruits and seeds.</p>
+           <p><strong>Dangers to Survival:</strong> Deforestation and hunting.</p>
+           <p>This monkey is recognized for its distinctive red face and plays an important role in seed dispersal within its habitat.</p>
+           <button class="back-button" onclick="goBack()">Back</button>
+       </div>
+   </div>
+</div>
+
+<script>
+// Function to go back to the animal list
+function goBack() {
+   const details = document.querySelectorAll('.animal-details');
+   details.forEach(detail => detail.style.display = 'none');
+}
+
+// Add click event listeners to animal links
+document.querySelectorAll('.animal-link').forEach(link => {
+   link.addEventListener('click', function() {
+       goBack(); // Hide all details first
+       const animalId = this.getAttribute('href').substring(1);
+       document.getElementById(animalId).style.display = 'block'; // Show selected animal details
+   });
+});
+</script>
+
+</body>
+</html>
